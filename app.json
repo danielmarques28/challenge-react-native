@@ -1,0 +1,12 @@
+{
+  "name": "challenge-react-native",
+  "displayName": "challenge-react-native",
+  "expo": {
+    "name": "challenge-react-native",
+    "slug": "challenge-react-native",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
