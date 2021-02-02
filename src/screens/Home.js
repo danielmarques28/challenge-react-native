@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import { StatusBar, StyleSheet, View } from 'react-native';
+import ProfileCardList from '../components/profile/ProfileCardList';
 
 export default function Home({ navigation }) {
   const [text, setText] = useState('');
@@ -9,13 +10,15 @@ export default function Home({ navigation }) {
   }, []);
 
   return (
-    <View styles={styles.container}>
-      <Text>Home</Text>
-      <Button
-        title="Profile"
-        onPress={() => {
-          navigation.navigate('Profile');
-        }}
+    <View style={styles.container}>
+      <StatusBar
+        barStyle="light-content"
+        translucent
+        backgroundColor="#0b1521"
+      />
+
+      <ProfileCardList
+        navigation={navigation}
       />
     </View>
   );
@@ -24,8 +27,7 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#0b1521'
   },
 });
