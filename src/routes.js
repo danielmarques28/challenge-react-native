@@ -13,14 +13,29 @@ export default function MyStack() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
+          options={screenOptions('Artists', '#0b1521')}
           name="Home"
           component={Home}
         />
         <Stack.Screen
+          options={screenOptions('Description', '#90c6f2')}
           name="Profile"
           component={Profile}
         />
       </Stack.Navigator>
     </NavigationContainer>
   );
+};
+
+function screenOptions(title, backgroundColor) {
+  return {
+    title,
+    headerStyle: {
+      backgroundColor,
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    }
+  }
 };
